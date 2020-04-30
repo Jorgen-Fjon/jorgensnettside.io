@@ -1,0 +1,72 @@
+/* CSS Document */
+
+/* sørger for at vi kan bruke æ. ø og å */
+@charset "UTF-8";
+
+.header {
+  border: 1px solid red;
+  padding: 15px;
+}
+
+/* Definerer main taggen. Det vil si hvordan gridsene skal oppføre seg på overordnet nivå*/
+main {
+	display: grid; /* Definerer at sidene skal vises med grids*/
+	/* grid-column-gap: 15px; mellomrom mellom gridsene horisontalt*/
+	grid-row-gap: 5px;  mellomrom mellom gridsene vertikaltt*/
+	text-align: center; /* all teks skal midtstilles som standard*/
+	grid-template-rows: 1fr 1fr 1fr 1fr; /* deler skjermen i 5 like store deler - vertikalt */
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* deler skjermen i 5 like store deler - horisontalt */
+}
+
+/* Definerer meny_venstre taggen/griden*/
+.meny_venstre{
+	grid-column: 1/1;
+	font-size: 14px;
+	text-align: left;
+	text-indent: 20px;
+	font-weight: bold;
+	grid-column-gap: 15px; /* mellomrom mellom gridsene horisontalt*/
+  border: 2px solid red;
+}
+.vindu {
+	grid-column: 2/6;
+	font-size: 14px;
+	text-align: left;
+	text-indent: 20px;
+	font-weight: bold;
+	grid-column-gap: 15px; /* mellomrom mellom gridsene horisontalt*/
+  border: 2px solid red;
+}
+.topp {
+	grid-column: 1/6;
+	font-size: 14px;
+	text-align: left;
+	text-indent: 20px;
+	font-weight: bold;
+	grid-column-gap: 15px; /* mellomrom mellom gridsene horisontalt*/
+  border: 2px solid red;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 0px;
+  border: 1px solid red;
+}
+
+.col-1 {width: 90%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 70%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
