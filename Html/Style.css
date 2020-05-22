@@ -1,69 +1,114 @@
-/* CSS Document */
-
-/* sørger for at vi kan bruke æ. ø og å */
-@charset "UTF-8";
 @font-face {
   font: Arial
+
 }
-body  {font-size: 16px;
+
+p {
+font-size: 19px;
+}
+
+.Break1 {
+margin-left: 11px;
+font-size: 19px;
+margin-bottom: 10px
+}
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
   background-image: url(https://somnomed.com/wp-content/uploads/2017/09/website-background-1.jpg);
-.header {
-  border: 1px solid red;
-  padding: 15px;
 }
 
-/* Definerer main taggen. Det vil si hvordan gridsene skal oppføre seg på overordnet nivå*/
-main {
-	display: grid; /* Definerer at sidene skal vises med grids*/
-	/* grid-column-gap: 15px; mellomrom mellom gridsene horisontalt*/
-	grid-row-gap: 5px;  mellomrom mellom gridsene vertikaltt*/
-	text-align: center; /* all teks skal midtstilles som standard*/
-	grid-template-rows: 1fr 1fr 1fr 1fr; /* deler skjermen i 5 like store deler - vertikalt */
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* deler skjermen i 5 like store deler - horisontalt */
+.Main_elements {
+position: relative;
+display:flex;
+margin-left: 30px;
+
 }
 
-/* Definerer meny_venstre taggen/griden*/
-.meny_venstre{
-	grid-column: 1/1;
-	font-size: 14px;
-	text-align: left;
-	text-indent: 20px;
-	font-weight: bold;
-	grid-column-gap: 15px; /* mellomrom mellom gridsene horisontalt*/
-  border: 2px solid red;
+iframe{
+position: absolute;
+top: 30px;
+right: 60px;
+border: 2px solid white;
+border-radius: 5px;
+
 }
+
+.Paragraf {
+margin-top: 20px;
+margin-bottom: 10px;
+
+}
+
+.Tekst {
+margin-top: 10px;
+}
+
+.oppgaveAhref {
+  text-align: left;
+  color: black !important;
+}
+
+.oppgaveAhref:hover {
+  color: white !important;
+}
+
 .hovedvindu {
-	grid-column: 2/6;
-  min-height: 500px
-  padding: 15px;
+  display: grid;
+  grid-column: 2/5;
+  grid-row: 1/6;
+  min-height: 500px;
   margin-top: 15px;
   margin-bottom: 7px;
   margin-left: 15px;
   color: black;
-	text-align: left;
-  background-image:repeat;
-	float: inline-start;
+  text-align: left;
+  background-image: repeat;
+  float: inline-start;
 }
 
-/*Definerer meny_topp taggen/griden*/
 .topp {
-	grid-column: 1/6;
-	font-size: 14px;
-	text-align: left;
-	text-indent: 20px;
-	font-weight: bold;
-	 /* mellomrom mellom gridsene horisontalt*/
+  text-align: left;
+  text-indent: 20px;
+  font-weight: bold;
+  /* mellomrom mellom gridsene horisontalt*/
   /*border: 2px solid red;*/
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  background: #F9F5E3;
+
 }
 
-li  {
-  float: left;
+
+a {
+  color: black;
+  list-style: none;
+  transition: .3s ease;
 }
 
-a:hover  {
-  padding: 8px;
+.meny_venstre1 {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+}
+
+a:hover {
+  padding: 10px;
+  color: white;
   background-color: #D14081;
+  border-radius: 50px;
 }
 
 .row::after {
@@ -78,15 +123,50 @@ a:hover  {
   border: 1px solid red;
 }
 
-.col-1 {width: 90%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 70%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
+.col-1 {
+  width: 90%;
+}
+
+.col-2 {
+  width: 16.66%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+.col-5 {
+  width: 41.66%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33%;
+}
+
+.col-8 {
+  width: 66.66%;
+}
+
+.col-9 {
+  width: 70%;
+}
+
+.col-10 {
+  width: 83.33%;
+}
+
+.col-11 {
+  width: 91.66%;
+}
+
+.col-12 {
+  width: 100%;
+}
